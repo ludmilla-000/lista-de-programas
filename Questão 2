@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int conversao(int hr, int min, int seg);
+
+int main() {
+  int hr, min, seg;
+  
+  printf("Programa que converte horas e minutos para segundos:\n");
+  printf("____________________________________________________\n\n");
+  
+  printf("Digite a Hora:");
+  scanf("%d", &hr);
+  
+  printf("Digite os Minutos:");
+  scanf("%d", &min);
+  
+  printf("Digite os Segundos:");
+  scanf("%d", &seg);
+  
+  conversao(hr, min, seg);
+  
+  return 0;
+}
+
+int conversao(int hr, int min, int seg) {
+  int c;
+  
+  c = (hr * 60 * 60) + (min * 60) + (seg);
+  
+  printf("\nO Valor convertido corresponde a: %d segundos.", c);
+}
